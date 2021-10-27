@@ -4,9 +4,9 @@
 login.jsp , loginaction.jsp , main.jsp , bbs.jsp <br>
 오라클 DB연동 , 메인페이지 , 게시판 틀 작성
 
--메모- login.jsp 에서 이름 한글 입력시 한글꺠짐 오류 발생 하였다.
+-메모- 
+login.jsp 에서 이름 한글 입력시 한글꺠짐 오류 발생 하였다.
  PageEncoding = "UTF-8" 은 *.JSP파일 자체의 인코딩 방법이었고
- 
  클라이언트 (브라우저) 로 응답정보를 내리는 헤더 정보에 포함되는 값 이 된다. (문서의 Charset = UTF-8)
  ContentType="text/html; charset = UTF-8"  은 사용자가 서버로 JSP 요청을 하면 서버(WAS) 측에서
  html을 통한 문자 전송시 ISO-8859-1 charset 이외의 문자들은 인코딩 되어 서버측으로 전송하게 되고
