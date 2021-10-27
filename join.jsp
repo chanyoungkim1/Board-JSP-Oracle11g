@@ -9,16 +9,17 @@
 <title>회원가입</title>
 </head>
 <body bgcolor = "#fef7ca">
-	<h1>회원가입</h1>
-	<form action="joinaction.jsp" method="post" onsubmit="return input_check()">
+	<h1>회원가입</h1> 
+	<h3><a href  = "main.jsp" >메인으로</a></h3>
+	<form action = "joinaction.jsp" method ="post" onsubmit ="return input_check()">
 	
-		<input type="text" placeholder="아이디" name="INPUT_USER_ID" >
+		<input type ="text"     placeholder="아이디"   name ="INPUT_USER_ID" >
 		<br>
-		<input type="password" placeholder="패스워드" name="INPUT_USER_PW" >
+		<input type ="password" placeholder="패스워드" name ="INPUT_USER_PW" >
 		<br>
-		<input type="text" placeholder="이름" name="INPUT_USER_NM" >
+		<input type ="text"     placeholder="이름"    name ="INPUT_USER_NM" >
 		<br>
-		<input type="submit" value="가입하기">
+		<input type ="submit"   value ="가입하기">
 		
 <!-- 	onsubmit 은 함수를 실행하고 return 값이 False면 페이지의 데이터를 joinaction.jsp로 보내지않는다. -->
 	</form>
@@ -33,9 +34,7 @@
 			alert("공백이 존재합니다.");
 			return false;
 		} else {
-			
 			return true;
-			
 		}
 	}
 	</script>
