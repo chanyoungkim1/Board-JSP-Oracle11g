@@ -13,7 +13,7 @@ login.jsp 에서 이름 한글 입력시 한글꺠짐 오류 발생 하였다.
  브라우저를 통해 전송할때 charset 자체를 지원하지 않기때문에 default 인코딩 charset인 ISO-8859-1로 <br>
  디코딩 되어 한글이 깨졌고 깨진 한글을 다시 ISO-8859-1로 인코딩후 UTF-8로 디코딩 해주면 정상적으로 한글을 확인할 수 있게 된다.<br>
  /* 하기 코드 참조 */<br>
-<h5> String USER_NM = request.getParameter("INPUT_USER_NM");	<br
+<h5> String USER_NM = request.getParameter("INPUT_USER_NM");	<br>
  USER_NM        = new String(USER_NM.getBytes("ISO-8859-1"), "UTF-8"); </h5>
 
 <hr><h3>V0.01</h3>
