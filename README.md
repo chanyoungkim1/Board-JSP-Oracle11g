@@ -1,10 +1,10 @@
 # Helping-JSP-Oracle11g
 <h2>우리집주변 일대일 자원봉사 매칭 서비스 </h2><br>
-<h3>V0.00</h3>
+<h3>V0.00</h3><hr>
 login.jsp , loginaction.jsp , main.jsp , bbs.jsp <br>
 오라클 DB연동 , 메인페이지 , 게시판 틀 작성
 
--메모- 
+<h4>-메모-</h4><br> 
 login.jsp 에서 이름 한글 입력시 한글꺠짐 오류 발생 하였다.
  PageEncoding = "UTF-8" 은 *.JSP파일 자체의 인코딩 방법이었고
  클라이언트 (브라우저) 로 응답정보를 내리는 헤더 정보에 포함되는 값 이 된다. (문서의 Charset = UTF-8) <br>
