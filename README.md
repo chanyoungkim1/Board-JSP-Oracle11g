@@ -17,4 +17,7 @@ login.jsp 에서 이름 한글 입력시 한글꺠짐 오류 발생 하였다.
  USER_NM        = new String(USER_NM.getBytes("ISO-8859-1"), "UTF-8"); </h5>
 
 <hr><h3>V0.01</h3>
+write.jsp , writeaction.jsp , delete.jsp , view.jsp
+
+  - 메모 - 글작성 시  글제목 , 내용 NULL 일 때 글작성 안되게하기 -> 완료
 
