@@ -21,7 +21,7 @@ write.jsp , writeaction.jsp , delete.jsp , view.jsp
 
   - 메모 - 글작성 시  글제목 , 내용 NULL 일 때 글작성 안되게하기 -> 완료
 
-<hr><h3> 0.02</h3>  
+<hr><h3> V0.02</h3>  
   update.jsp , updateaction.jsp , bbs.jsp<br>
 글수정 작성 , 답글달기 작성 / 게시글 검색 , 게시판 페이징 처리(보완)
  - 메모 -
@@ -29,3 +29,5 @@ write.jsp , writeaction.jsp , delete.jsp , view.jsp
 <br> 답글달기 -> 완료
 <br> 페이지 [1][2][3] 식으로 만들기 / 페이징 처리 마지막 페이지 글 없는데 나오는것.
 <br> 검색 버튼 누른뒤에도 검색 내용 남게하기
+
+<hr><h3> V0.03</h3>  
