@@ -30,7 +30,6 @@
  	
  	String sv = "";
 	
-// 	if (searchValue	== null){
  	String searchValue 	 = request.getParameter("bbsSearch");
  	sv =  request.getParameter("sv");
 // 	}
@@ -38,6 +37,9 @@
 		searchValue 	 = "";
 		// searchValue   = request.getParameter("bbsSearch");
 		
+	}
+	else{
+		searchValue          = new String(searchValue.getBytes("ISO-8859-1"), "UTF-8"); 
 	}
 	if (  sv != ""){		
 		searchValue 	 = request.getParameter("sv");
@@ -47,7 +49,7 @@
 		sv = searchValue;
 	}
 
-	searchValue          = new String(searchValue.getBytes("ISO-8859-1"), "UTF-8"); 
+// 	searchValue          = new String(searchValue.getBytes("ISO-8859-1"), "UTF-8"); 
 // 	sv          = new String(sv.getBytes("ISO-8859-1"), "UTF-8"); 
 
 	String searchValue2  = searchValue;
@@ -96,7 +98,7 @@
 <body bgcolor="#fef7ca">		
 
 	<h3><a href  = "main.jsp" >메인으로</a></h3>
-	<hr> 게시판
+	
 	
 
 
@@ -147,11 +149,13 @@
 	while(rs.next() && skipR -- > 0 );
 		
 		while( i++ < rowSize){ 
-			
+			if (skipR == 0)
+				break;
 			int bbs_num            = rs.getInt("BBS_NUM");
 			String bbs_title       = rs.getString("BBS_TITLE").replaceAll(" ", "&nbsp;").replaceAll("<","&lt;").replaceAll(">","&gt").replaceAll("\n","<br>");
 			int bbs_visit          = rs.getInt("BBS_VISIT");
 		 	String bbs_createname  = rs.getString("BBS_CREATENAME");
+		 	
 		 	String bbs_createdate  = rs.getString("BBS_CREATEDATE");
 		 	String bbs_updatename  = rs.getString("BBS_UPDATENAME");
 		 		if( bbs_updatename == null ) {
@@ -211,7 +215,7 @@
 			}
  		} // 137 line while(rs.next())
 		
- 		out.print("pg = " +  pg + "|| i = " +  i + "|| skipR = " +  skipR + "|| rowSize = " +  rowSize+ "|| skipRow = " +  skipRow + "|| bbsTotal = " +  bbsTotal + "|| searchValue = " +  searchValue+ "|| searchValue2 = " +  searchValue2  );
+//  		out.print("pg = " +  pg + "|| i = " +  i + "|| skipR = " +  skipR + "|| rowSize = " +  rowSize+ "|| skipRow = " +  skipRow + "|| bbsTotal = " +  bbsTotal + "|| searchValue = " +  searchValue+ "|| searchValue2 = " +  searchValue2  );
 	} //	126 line else
 %>
 
@@ -219,15 +223,22 @@
 	</table>
 	<br>
 	<a href="write.jsp">글쓰기</a>
+	<a href  = "bbs.jsp?pg=1&sv=" > 목록
 	<br>
 <%
 	int pgCnt     = bbsTotal / block;
+
 	int startPage = ((pg - 1) / block) * block + 1 ;
+	
 	int endPage   = startPage + block -1;
+
 	int maxPage   = 0;
-	maxPage = (int)Math.ceil(bbsTotal/rowSize); 
+	
+	double testmax  = Math.ceil((double)bbsTotal/(double)rowSize); 
+	maxPage = (int)Math.ceil((double)bbsTotal/(double)rowSize); 
+	System.out.println(testmax);	
 	if(endPage > maxPage){
-		endPage = maxPage+1;
+		endPage = maxPage;
 	}
 	
 	if ( endPage != maxPage){
@@ -238,11 +249,11 @@
 	if( pg>block ) {
 		if ( pg > block){
 %>
-			[<a href="bbs.jsp?pg=1">◀◀</a>]
+			[<a href="bbs.jsp?pg=1&sv=<%=sv%>">◀◀</a>]
 <%	
 		}
 %>
-	[<a href="bbs.jsp?pg=<%=startPage-1%>">◀</a>]
+	[<a href="bbs.jsp?pg=<%=startPage-1%>&sv=<%=sv%>">◀</a>]
 <%
 	}
 %>
@@ -269,13 +280,11 @@
 <%
 	if( endPage < pgCnt ) {
 %>
-		[<a href="bbs.jsp?pg=<%=endPage+1 %>">▶</a>]
-		[<a href="bbs.jsp?pg=<%=maxPage+1 %>">▶▶</a>]
+		[<a href="bbs.jsp?pg=<%=endPage+1 %>&sv=<%=sv%>">▶</a>]
+		[<a href="bbs.jsp?pg=<%=maxPage+1 %>&sv=<%=sv%>">▶▶</a>]
 <% 
 		
 	} 	
-
-
 	rs.close();
 	stmt.close();
 	conn.close();
