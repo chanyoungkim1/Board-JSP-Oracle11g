@@ -1,5 +1,5 @@
-# Helping-JSP-Oracle11g
-<h2>우리집주변 일대일 자원봉사 매칭 서비스 </h2><br>
+# Board-JSP-Oracle11g
+<h2>JSP 게시판 제작 </h2><br>
 <hr><h3>V0.00</h3>
 <h4>-진행사항-</h4><br>
 login.jsp , loginaction.jsp , main.jsp , bbs.jsp <br>
