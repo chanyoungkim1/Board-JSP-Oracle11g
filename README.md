@@ -19,20 +19,20 @@ login.jsp 에서 이름 한글 입력시 한글꺠짐 오류 발생 하였다.
  <br><br><h4> 다음목표 : 글작성 , 글삭제 , 글보기 구현하기</h4>
 
 <hr><h3>V0.01</h3>
-	write.jsp , writeaction.jsp , delete.jsp , view.jsp
+	write.jsp , writeaction.jsp , delete.jsp , view.jsp<br>
 
-	<br> - 메모 - 글작성 시  글제목 , 내용 NULL 일 때 글작성 안되게하기 -> 완료
+	-메모- 글작성 시  글제목 , 내용 NULL 일 때 글작성 안되게하기 -> 완료
 
 <hr><h3> V0.02</h3>  
 	  update.jsp , updateaction.jsp , bbs.jsp<br>
 	글수정 작성 , 답글달기 작성 / 게시글 검색 , 게시판 페이징 처리(보완)
-	 - 메모 -
+	-메모-
 	<br> &nbsp;  4Page 에서 수정 후 4page로 가기 -> 완료
 	<br> 답글달기 -> 완료
 	<br> 페이지 [1][2][3] 식으로 만들기 / 페이징 처리 마지막 페이지 글 없는데 나오는것. -> 완료
-	<br> 검색 버튼 누른뒤에도 검색 내용 남게하기 -> 완료
+	<br> 검색 버튼 누른뒤에도 검색 내용 남게하기 -> 완료<br>
 	
- 	<br><br><h4> 다음목표 : 게시글 검색 기능 , 페이징 처리 구현하기</h4>
+ 	<br><h4> 다음목표 : 게시글 검색 기능 , 페이징 처리 구현하기</h4>
 <hr><h3> V0.03</h3>  
  10/16 bbs.jsp , view.jsp 
 	<br>
