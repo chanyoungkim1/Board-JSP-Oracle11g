@@ -16,7 +16,7 @@ login.jsp 에서 이름 한글 입력시 한글꺠짐 오류 발생 하였다.
 <h5> String USER_NM = request.getParameter("INPUT_USER_NM");	<br>
  USER_NM        = new String(USER_NM.getBytes("ISO-8859-1"), "UTF-8"); </h5>
  
- <br><br><h4> 다음목표 : 글작성 , 글삭제 , 글보기 구현하기</h4>
+# 목표 : 글작성 , 글삭제 , 글보기 구현하기
 
 <hr><h3>V0.01</h3>
 	write.jsp , writeaction.jsp , delete.jsp , view.jsp<br>
@@ -32,7 +32,7 @@ login.jsp 에서 이름 한글 입력시 한글꺠짐 오류 발생 하였다.
 	<br> 페이지 [1][2][3] 식으로 만들기 / 페이징 처리 마지막 페이지 글 없는데 나오는것. -> 완료
 	<br> 검색 버튼 누른뒤에도 검색 내용 남게하기 -> 완료<br>
 	
- 	<br><h4> 다음목표 : 게시글 검색 기능 , 페이징 처리 구현하기</h4>
+ # 목표 : 게시글 검색 기능 , 페이징 처리 구현하기
 <hr><h3> V0.03</h3>  
  10/16 bbs.jsp , view.jsp 
 	<br>
@@ -43,13 +43,13 @@ login.jsp 에서 이름 한글 입력시 한글꺠짐 오류 발생 하였다.
   	 2. 검색 bbs.jsp form(96 line) 부분 value=%searchValue% 로 검색 후에도 검색어 남게하기 -> 완료 <br> 
 	 3 페이지 이동 부분bbs.jsp line 226  에서 [2](페이지버튼)클릭시  searchValue(검색)값 유지 되도록 하기.<br>
 	
-	 <br><br><h4> 다음목표 : 게시글 검색 기능 미완성 부분 완성하기.</h4>
+# 목표 : 게시글 검색 기능 미완성 부분 완성하기
 <hr><h3> V0.04</h3>  
  10/16 bbs.jsp
 	<br>
 	 게시글 검색 기능 완성    
 	<br><br> &nbsp;- 메모 - 페이지 넘어가도 검색어 유지 및 검색 상태 유지하도록 변경, 
- 	<br> V0.03 3. 페이지 이동 부분 bbs.jsp line 226 <%-- [<a href="bbs.jsp?pg=<%=i%>&searchValue=<%=searchValue%>"><%=i  %></a>]   --%> 에서 [2](페이지버튼)클릭시  searchValue값 유지안되는문제 ->완료
-	<br><br><h4> 다음목표 : css틀 적용시키기. </h4>
-	
+ 	<br> V0.03 3. 페이지 이동 부분 bbs.jsp line 226 <%-- [<a href="bbs.jsp?pg=<%=i%>&searchValue=<%=searchValue%>"><%=i  %></a>]   --%> 에서 	     [2](페이지버튼)클릭시  searchValue값 유지안되는문제 ->완료<br>
+# 목표 : 게시글 검색 기능 미완성 부분 완성하기
+<hr>
 	
