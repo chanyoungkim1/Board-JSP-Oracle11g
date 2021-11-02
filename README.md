@@ -36,7 +36,7 @@ login.jsp 에서 이름 한글 입력시 한글꺠짐 오류 발생 하였다.
 	 게시글 검색 , 게시판 페이징 처리 <br> 
 	- 메모-  : view.jsp / bbs.jsp 에서 제목,내용 부분 html 스크립트"<%","%>" 등 입력시 오류 -> replaceAll 사용하여 출력 가능하게 변경<br><br>
 	 1.while(rs.next() && skipR -- > 0); while(rs.next() && i++ < rowSize){} 문에서 rs.next()가 두번 사용되어 가장 첫글은 나오지 않는문제 
-	<br> $nbsp; --> while문 수정으로 해결<br>
+	<br>    --> while문 수정으로 해결 <br>
   	 2. 검색 bbs.jsp form(96 line) 부분 value=%searchValue% 로 검색 후에도 검색어 남게하기 -> 완료 <br> 
 	 3 페이지 이동 부분bbs.jsp line 226  에서 [2](페이지버튼)클릭시  searchValue(검색)값 유지 되도록 하기. ->완료<br><BR>
 <hr><h3> V0.04</h3>  
