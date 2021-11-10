@@ -34,7 +34,7 @@ login.jsp 에서 이름 한글 입력시 한글꺠짐 오류 발생 하였다.
 	
 ## Next Goal : 게시글 검색 기능 , 페이징 처리 구현하기.
 <hr><h3> V0.03</h3>  
- 10/16 bbs.jsp , view.jsp 
+ bbs.jsp , view.jsp 
 	<br>
 	 게시글 검색 , 게시판 페이징 처리 <br> 
 	- 메모-  : view.jsp / bbs.jsp 에서 제목,내용 부분 html 스크립트"<%","%>" 등 입력시 오류 -> replaceAll 사용하여 출력 가능하게 변경<br><br>
@@ -45,12 +45,15 @@ login.jsp 에서 이름 한글 입력시 한글꺠짐 오류 발생 하였다.
 	
 ## Next Goal : 게시글 검색 기능 완성 하기.
 <hr><h3> V0.04</h3>  
- 10/16 bbs.jsp
+ bbs.jsp
 	<br>
 	 게시글 검색 기능 완성    
 	<br><br> &nbsp;- 메모 - 페이지 넘어가도 검색어 유지 및 검색 상태 유지하도록 변경, 
  	<br> V0.03 3. 페이지 이동 부분 bbs.jsp line 226 [1][2](페이지버튼)클릭시  searchValue값 유지안되는문제 ->완료<br>
 
 ## Next Goal : CSS 적용하기 <br>
+<hr>
+
+
 <hr>
 	
